@@ -32,15 +32,15 @@ const Formulario = () => {
             action=""
             onSubmit={handleSubmit}
             >
-            <div className='my-5'>
+            <div className='my-5 rounded-lg'>
                 <label className="block mb-3 font-bold
-                text-gray-400 uppercase">
+                text-indigo-500 uppercase">
                     Marca
                 </label>
                 <select
                     name="marca"
-                    className="w-full p-3 bg-white border
-                    border-gray-200"
+                    className="w-full p-4 bg-white border
+                    border-gray-200 rounded-lg "
                     onChange={ e => handleChangeDatos(e) }
                     value={datos.marca}
                 >   
@@ -60,14 +60,14 @@ const Formulario = () => {
             </div>
 
 
-            <div className='my-5'>
+            <div className='my-5 rounded-lg'>
                 <label className="block mb-3 font-bold
-                text-gray-400 uppercase">
+                text-indigo-500 uppercase">
                     Año
                 </label>
                 <select
                     name="year"
-                    className="w-full p-3 bg-white border
+                    className="w-full p-4 bg-white border rounded-lg
                     border-gray-200"
                     onChange={ e => handleChangeDatos(e) }
                     value={datos.year}
@@ -89,7 +89,7 @@ const Formulario = () => {
 
             <div className='my-5'>
                 <label className="block mb-3 font-bold
-                text-gray-400 uppercase">
+                text-indigo-500 uppercase">
                     Elige un Plan
                 </label>
                 <div className='flex gap-3 items-center'>
@@ -113,8 +113,8 @@ const Formulario = () => {
             <input 
             
             type="submit"
-            className='w-full bg-indigo-500 hover:bg-indigo-600 transition-colors
-              text-white cursor-pointer p-3 uppercase font-bold'
+            className='w-full bg-amber-300 hover:bg-amber-400 transition-colors
+              text-black cursor-pointer p-3 uppercase font-bold rounded-lg'
             value='cotizar'
             />
         </form>

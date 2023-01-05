@@ -23,6 +23,7 @@ const Resultado = () => {
     <h2 className="text-gray-600 font-black text-3xl">
         Resumen
     </h2>
+    <div className="md:flex justify-around my-4">
     <p className="my-2">
         <span className="font-bold">Marca: </span>
         {nombreMarca.nombre}
@@ -37,10 +38,11 @@ const Resultado = () => {
         <span className="font-bold">Año del auto: </span>
         {yearRef.current}
     </p>
+    </div>
 
     <p className="my-2 text-2xl">
         <span className="font-bold">Total de la cotización: </span>
-        {resultado}
+        <span className="text-green-500 font-bold">{resultado}</span>
     </p>
 </div>
   
