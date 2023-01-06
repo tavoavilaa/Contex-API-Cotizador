@@ -3,10 +3,14 @@ import useCotizador from "../hooks/useCotizador"
 import Spinner from "./Spinner"
 import Resultado from "./Resultado"
 import Spline from '@splinetool/react-spline';
+import EmptyState from "./EmptyState";
 
 const AppSeguro = () => {
 
-  const { resultado, cargando } = useCotizador()
+  const { resultado, cargando, datos } = useCotizador()
+
+  const {marca} = datos
+
 
   return (
     <>
@@ -22,7 +26,18 @@ const AppSeguro = () => {
         {cargando ? <Spinner/> : <Resultado/>}
       </main>
       <div className="">
-      <Spline scene="https://prod.spline.design/zBRY5KN6kvMzUYQR/scene.splinecode" />
+        {
+          !marca &&<EmptyState/>
+        }
+        {
+         marca == 1 ? <Spline scene="https://prod.spline.design/3lIMKCetDclEKNep/scene.splinecode" /> : ""
+        }
+        {
+          marca == 2 ? <Spline scene="https://prod.spline.design/k2A41ZcUeCKZpNnB/scene.splinecode" /> : ""
+        }
+        {
+          marca == 3 ? <Spline scene="https://prod.spline.design/O1N5DS4zjXQTuNdt/scene.splinecode" /> : ""
+        }
       </div>
     </div>
 
